@@ -8,6 +8,13 @@ body {
   background-color : #000;
 }
 
+a {
+  color : darkgrey;
+}
+a:hover {
+  color: white;
+}
+
 #header {
   background-color: #333;
   position: fixed;
