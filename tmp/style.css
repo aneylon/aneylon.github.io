@@ -1,0 +1,112 @@
+* {
+	margin : 0px;
+	padding : 0px;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #F5F8FA;
+}
+
+ul{
+	list-style-type: none;
+}
+
+ul li {
+	display: inline-block;
+	padding: 15px;
+}
+
+i {
+	color:white;
+}
+
+input {
+	margin: 5px;
+	padding: 5px;
+}
+
+#wrapper {
+	width: 700px;
+	margin: auto;
+}
+
+#topPadding {
+	height: 50px;
+	background-color: #2B7BB9;
+	padding: 20px;
+}
+
+#title {
+	font-size: 350%;
+	color: #fff;
+	font-weight: bold;
+}
+
+#headerHandle {
+	color: #888;
+}
+
+#sendTwittle {
+	background-color: #E9F1F8;
+}
+
+#loadNew {
+	cursor: pointer;
+	background-color: #F5F8FA;
+	color: #39f;
+}
+
+#loadNew:hover {
+	background-color: #e0e8ed;
+}
+
+.left {
+	float: left;
+}
+
+.seventyFive{
+	width: 75%;
+}
+
+.startHidden {
+	display: none;
+}
+
+.centerText {
+	text-align: center;
+}
+
+.twittle {
+	background-color: #fff;
+}
+
+.twittle:hover {
+	background-color: #F5F8FA;
+}
+
+.userName {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.handle {
+	color : #888;
+	cursor: pointer;
+}
+
+.timeStamp {
+	color : #bbb;
+}
+
+.all {
+	padding: 15px;
+	border: solid #ccc 1px;
+	background-color: #fff;
+}
+/*
+
+E9F1F8 input div color
+2B7BB9 header color
+
+*/

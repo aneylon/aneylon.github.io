@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='newStyle.css' rel='stylesheet'>
+  <script src='newApp.js'></script>
+</head>
+<body>
+  <div id='header'>
+    <h1 class='blueText'>Twittler</h1>
+  </div>
+  <div id='wrapper' class='greyBack'>
+    <div id='newTweet' class='blueBack'>
+      <div id='inputWrapper'>
+        <input type='text' placeholder='Write a new tweet...' class='bigFont noBorder padFive' id='newInputText'>
+        <input type='button' value='Post' class='bigFont whiteText greenBack noBorder padFive' id='newInputButton'>
+      </div>
+    </div>
+    <div id='allAndNew'>
+      <div class='padTwentyFive'>
+      <div id='showAll' class='widthTwenty inlineBlock centerText'>
+        <span class='medFont blueText'>Show all</span>
+      </div>
+      <div id='showNew' class='widthEighty inlineBlock centerText'>
+        <span class='medFont blueText dashBorder'>Load new tweets</span>
+      </div>
+      </div>
+    </div>
+    <div id='tweets'>
+      <div class='tweet padTwentyFive overflowAuto'>
+        <div class='widthTwenty centerText left'>
+          <div id='icon' class='darkGreyBack'></div>
+          <p class='blueText boldFont'>name</p>
+          <p class='blueText'>time</p>
+        </div>
+        <div class='right message bigFont whiteBack padFive widthEighty heightOneHundred'>
+          message goes here
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
