@@ -15,17 +15,21 @@
   <div id='wrapper' class='greyBack'>
     <div id='newTweet' class='blueBack'>
       <div id='inputWrapper'>
+        <input type='text' placeholder='Enter your user name' class='bigFont noBorder padFive widthOneHundred' id='userName'><br><br>
         <input type='text' placeholder='Write a new tweet...' class='bigFont noBorder padFive' id='newInputText'>
         <input type='button' value='Post' class='bigFont whiteText greenBack noBorder padFive' id='newInputButton'>
       </div>
     </div>
     <div id='allAndNew'>
+      <div id='currentFilter' class='centerText medFont blueText padFifteen hidden'>
+        Showing all tweets for <span id="filteredUser">steve<span>
+      </div>
       <div class='padTwentyFive'>
-      <div id='showAll' class='widthTwenty inlineBlock centerText'>
-        <span class='pointer medFont blueText'>Show all</span>
+      <div class='widthTwenty inlineBlock centerText'>
+        <span id='showAll' class='pointer medFont blueText dashBorder hidden'>Show all</span>
       </div>
       <div id='showNew' class='widthEighty inlineBlock centerText'>
-        <span id='showNewText' class='pointer medFont blueText dashBorder'>Load new tweets</span>
+        <span id='showNewText' class='pointer medFont blueText dashBorder hidden'>Load new tweets</span>
       </div>
       </div>
     </div>
