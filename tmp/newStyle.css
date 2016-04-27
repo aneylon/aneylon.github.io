@@ -1,125 +1,112 @@
 * {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Lato', sans-serif;
+	margin : 0px;
+	padding : 0px;
+	font-family: sans-serif;
 }
 
-#header {
-  padding: 20px;
-  border-bottom: solid lightgrey 2px;
+body {
+	background-color: #F5F8FA;
 }
 
-#header h1 {
-  padding-left: 35px;
+ul{
+	list-style-type: none;
+}
+
+ul li {
+	display: inline-block;
+	padding: 15px;
+}
+
+i {
+	color:white;
+}
+
+input {
+	margin: 5px;
+	padding: 5px;
 }
 
 #wrapper {
-  margin: auto;
-  margin-top: 65px;
-  width: 800px;
+	width: 700px;
+	margin: auto;
 }
 
-#inputWrapper {
-  padding: 10px;
-  margin: auto;
+#topPadding {
+	height: 50px;
+	background-color: #2B7BB9;
+	padding: 20px;
 }
 
-#newInputText {
-  width: 78%;
+#title {
+	font-size: 350%;
+	color: #fff;
+	font-weight: bold;
 }
 
-#newInputButton {
-  width: 20%;
+#headerHandle {
+	color: #888;
 }
 
-#icon {
-  width: 100px;
-  height: 100px;
+#sendTwittle {
+	background-color: #E9F1F8;
 }
 
-.inlineBlock {
-  display: inline-block;
-}
-.widthTwenty {
-  width: 20%;
-}
-
-.widthEighty {
-  width: 78%;
+#loadNew {
+	cursor: pointer;
+	background-color: #F5F8FA;
+	color: #39f;
 }
 
-.centerText {
-  text-align: center;
-}
-
-.padFive {
-  padding: 5px;
-}
-
-.padTwentyFive {
-  padding: 25px;
-}
-
-.heightOneHundred {
-  height: 150px;
-}
-.noBorder {
-  border: none;
-}
-
-.dashBorder {
-  border-bottom: dashed;
-}
-
-.bigFont {
-  font-size: 200%;
-}
-
-.medFont {
-  font-size: 150%
-}
-
-.boldFont {
-  font-weight: bold;
-}
-
-.blueText {
-  color: #437bae;
-}
-
-.whiteText {
-  color: white;
-}
-
-.blueBack {
-  background-color: #437bae;
-}
-
-.greenBack {
-  background-color: #48d084;
-}
-
-.greyBack {
-  background-color: #f5f5f5;
-}
-
-.darkGreyBack {
-  background-color: #d8d8d8;
-  margin: auto;
-}
-
-.whiteBack {
-  background-color: white;
+#loadNew:hover {
+	background-color: #e0e8ed;
 }
 
 .left {
-  float: left;
+	float: left;
 }
 
-.right {
-  float: right;
+.seventyFive{
+	width: 75%;
 }
 
-.overflowAuto {
-  overflow: auto;
+.startHidden {
+	display: none;
 }
+
+.centerText {
+	text-align: center;
+}
+
+.twittle {
+	background-color: #fff;
+}
+
+.twittle:hover {
+	background-color: #F5F8FA;
+}
+
+.userName {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.handle {
+	color : #888;
+	cursor: pointer;
+}
+
+.timeStamp {
+	color : #bbb;
+}
+
+.all {
+	padding: 15px;
+	border: solid #ccc 1px;
+	background-color: #fff;
+}
+/*
+
+E9F1F8 input div color
+2B7BB9 header color
+
+*/

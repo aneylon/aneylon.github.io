@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <!-- fonts here -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="wrapper">
-        <div id="topPadding">
-          <i class="fa fa-home fa-3x left" aria-hidden="true" id="goHome"></i>
-          <p id="title" class="centerText">twittler<p>
-        </div>
-      <div id="header" class="centerText all startHidden">
-        <h1>User Name</h1>
-        <p id="headerHandle">@handle</p>
-        <ul>
-          <li>
-            <p>twittles</p>
-            <p>1</p>
-          </li>
-          <li>
-            <p>followers</p>
-            <p id="numFollowers">1</p>
-          </li>
-          <li>
-            <p>following</p>
-            <p id="numFollowing">1</p>
-          </li>
-        </ul>
-      </div>
-      <div id="signin" class="centerText all">
-        <input type="text" placeholder="name"><br>
-        <input type="text" placeholder="handle"><br>
-        <input type="button" value="login" id="loginButton">
-      </div>
-      <div id="sendTwittle" class="centerText all startHidden">
-        <input type="text" placeholder="what's happening?" class="seventyFive" id="statusUpdate">
-        <input type="button" value="twittle" id="statusUpdateButton">
-      </div>
-      <div id="loadNew" class="centerText all startHidden">
-        load # new twittle(s)
-      </div>
-      <div id="twittles">
-<!--
-         <div class="twittle">
-          <p class="userLink">
-            <span class="userName">user name </span>
-            <span class="handle"> @UserName </span>
-            <span class="timeStamp">1 minute ago</span>
-          </p>
-          <p class="message">message</p>
-        </div> 
--->
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='style.css' rel='stylesheet'>
+  <script src='jquery.js'></script>
+  <script src='moment.min.js'></script>
+  <script src='data_generator.js'></script>
+  <script src='app.js'></script>
+</head>
+<body>
+  <div id='header'>
+    <h1 class='blueText'>Twittler</h1>
+  </div>
+  <div id='wrapper' class='greyBack'>
+    <div id='newTweet' class='blueBack'>
+      <div id='inputWrapper'>
+        <input type='text' placeholder='Write a new tweet...' class='bigFont noBorder padFive' id='newInputText'>
+        <input type='button' value='Post' class='bigFont whiteText greenBack noBorder padFive' id='newInputButton'>
       </div>
     </div>
-    <script src="jquery.js"></script>
-    <script src="data_generator.js"></script>
-    <script src="moment.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+    <div id='allAndNew'>
+      <div class='padTwentyFive'>
+      <div id='showAll' class='widthTwenty inlineBlock centerText'>
+        <span class='pointer medFont blueText'>Show all</span>
+      </div>
+      <div id='showNew' class='widthEighty inlineBlock centerText'>
+        <span id='showNewText' class='pointer medFont blueText dashBorder'>Load new tweets</span>
+      </div>
+      </div>
+    </div>
+    <div id='tweets'>
+      <div class='tweet padTwentyFive overflowAuto'>
+        <div class='widthTwenty centerText left'>
+          <div id='icon' class='darkGreyBack'></div>
+          <p class='userName blueText boldFont'>name</p>
+          <p class='blueText'>time</p>
+        </div>
+        <div class='right message bigFont whiteBack padFive widthEighty heightOneHundred'>
+          message goes here
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

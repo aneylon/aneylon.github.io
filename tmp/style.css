@@ -1,112 +1,133 @@
 * {
-	margin : 0px;
-	padding : 0px;
-	font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
 }
 
-body {
-	background-color: #F5F8FA;
+#header {
+  padding: 20px;
+  border-bottom: solid lightgrey 2px;
 }
 
-ul{
-	list-style-type: none;
-}
-
-ul li {
-	display: inline-block;
-	padding: 15px;
-}
-
-i {
-	color:white;
-}
-
-input {
-	margin: 5px;
-	padding: 5px;
+#header h1 {
+  padding-left: 35px;
 }
 
 #wrapper {
-	width: 700px;
-	margin: auto;
+  margin: auto;
+  margin-top: 65px;
+  width: 800px;
 }
 
-#topPadding {
-	height: 50px;
-	background-color: #2B7BB9;
-	padding: 20px;
+#inputWrapper {
+  padding: 10px;
+  margin: auto;
 }
 
-#title {
-	font-size: 350%;
-	color: #fff;
-	font-weight: bold;
+#newInputText {
+  width: 78%;
 }
 
-#headerHandle {
-	color: #888;
+#newInputButton {
+  width: 20%;
 }
 
-#sendTwittle {
-	background-color: #E9F1F8;
+#icon {
+  width: 100px;
+  height: 100px;
 }
 
-#loadNew {
-	cursor: pointer;
-	background-color: #F5F8FA;
-	color: #39f;
+.pointer {
+  cursor: pointer;
 }
 
-#loadNew:hover {
-	background-color: #e0e8ed;
+.inlineBlock {
+  display: inline-block;
+}
+.widthTwenty {
+  width: 20%;
 }
 
-.left {
-	float: left;
-}
-
-.seventyFive{
-	width: 75%;
-}
-
-.startHidden {
-	display: none;
+.widthEighty {
+  width: 78%;
 }
 
 .centerText {
-	text-align: center;
+  text-align: center;
 }
 
-.twittle {
-	background-color: #fff;
+.padFive {
+  padding: 5px;
 }
 
-.twittle:hover {
-	background-color: #F5F8FA;
+.padFifteen {
+  padding: 15px;
 }
 
-.userName {
-	font-weight: bold;
-	cursor: pointer;
+.padTwentyFive {
+  padding: 25px;
 }
 
-.handle {
-	color : #888;
-	cursor: pointer;
+.heightOneHundred {
+  height: 150px;
+}
+.noBorder {
+  border: none;
 }
 
-.timeStamp {
-	color : #bbb;
+.dashBorder {
+  border-bottom: dashed;
 }
 
-.all {
-	padding: 15px;
-	border: solid #ccc 1px;
-	background-color: #fff;
+.bigFont {
+  font-size: 200%;
 }
-/*
 
-E9F1F8 input div color
-2B7BB9 header color
+.medFont {
+  font-size: 150%
+}
 
-*/
+.boldFont {
+  font-weight: bold;
+}
+
+.blueText {
+  color: #437bae;
+}
+
+.whiteText {
+  color: white;
+}
+
+.blueBack {
+  background-color: #437bae;
+}
+
+.greenBack {
+  background-color: #48d084;
+}
+
+.greyBack {
+  background-color: #f5f5f5;
+}
+
+.darkGreyBack {
+  background-color: #d8d8d8;
+  margin: auto;
+}
+
+.whiteBack {
+  background-color: white;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.overflowAuto {
+  overflow: auto;
+}
