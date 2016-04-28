@@ -39,6 +39,16 @@
   background-color: white;
 }
 
+.relative {
+  position: relative;
+}
+
+.topLeft {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
 .underLined {
   text-decoration: underline;
 }

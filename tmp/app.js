@@ -16,6 +16,21 @@ $(document).ready(function(){
     $("#currentFilter").slideDown();
     $("#filteredUser").text(selectedUser);
     $("#inputWrapper").slideUp();
+    $("html, body").animate({ scrollTop: 0 },"slow");
+  });
+
+  $("body").on("click",".icon",function(){
+    var selectedUser = $(this).parent().find(".userName").text().slice(1);
+    app.currentStream = streams.users[selectedUser];
+    app.update(app.currentStream);
+
+    var $icon = $("#heroIcon");
+    $icon.jdenticon(md5(selectedUser));
+
+    $("#currentFilter").slideDown();
+    $("#filteredUser").text(selectedUser);
+    $("#inputWrapper").slideUp();
+    $("html, body").animate({ scrollTop: 0 },"slow");
   });
   
   $("#newInputText").on("keydown",function(event){
@@ -32,7 +47,7 @@ $(document).ready(function(){
     app.update(app.currentStream);
   });
 
-  $("#showAll").on("click",function(){
+  $(".showAll").on("click",function(){
     app.currentStream = app.defaultStream;
     app.update(app.currentStream);
     $("#currentFilter").slideUp();
@@ -87,7 +102,7 @@ var app = (function(){
       var tweet = stream[index];
       var $tweet = $("<div class='tweet padTwentyFive overflowAuto'></div>");
       var $userWrapper = $("<div class='widthTwenty centerText left'></div>");
-      var $icon = $("<canvas width='100' height='100' id='icon' class='whiteBack' />");
+      var $icon = $("<canvas width='100' height='100' id='icon' class='whiteBack icon' />");
       $icon.jdenticon(md5(tweet.user));
       var $user = $("<p class='userName pointer blueText boldFont underLined padFive'></p> ");
       $user.text("@" + tweet.user);
