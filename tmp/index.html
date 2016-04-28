@@ -2,6 +2,8 @@
 <html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
   <link href='style.css' rel='stylesheet'>
   <script src='jquery.js'></script>
   <script src='moment.min.js'></script>
@@ -10,25 +12,30 @@
 </head>
 <body>
   <div id='header'>
-    <h1 class='blueText'>Twittler</h1>
+    <h1 class='blueText pointer' id="showAll">Twittler</h1>
   </div>
   <div id='wrapper' class='greyBack'>
     <div id='newTweet' class='blueBack'>
       <div id='inputWrapper'>
-        <input type='text' placeholder='Enter your user name' class='bigFont noBorder padFive widthOneHundred' id='userName'><br><br>
-        <input type='text' placeholder='Write a new tweet...' class='bigFont noBorder padFive' id='newInputText'>
-        <input type='button' value='Post' class='bigFont whiteText greenBack noBorder padFive' id='newInputButton'>
+        <!-- <input type='text' placeholder='Enter your user name' class='bigFont noBorder padFive widthOneHundred' id='userName'> -->
+        <span class='whiteText bigFont padFive widthTwenty'>
+          @ <span contenteditable='true' id='userName'>visitor</span> : 
+          <i class="fa fa-pencil-square-o alphaFifty" aria-hidden="true"></i>
+        </span>
+        <input type='text' placeholder='Write a new tweet...' class='bigFont noBorder padFive widthSixty' id='newInputText'>
+        <input type='button' value='Post' class='bigFont whiteText greenBack noBorder padFive pointer widthTwenty' id='newInputButton'>
       </div>
     </div>
     <div id='allAndNew'>
-      <div id='currentFilter' class='centerText medFont blueText padFifteen hidden'>
-        Showing all tweets for <span id="filteredUser">steve<span>
+      <div id='currentFilter' class='centerText medFont whiteText blueBack padFifteen hidden'>
+        <div id='icon' class='darkGreyBack'></div>
+        <p class='medFont'>@<span id='filteredUser'></span><p>
       </div>
       <div class='padTwentyFive'>
-      <div class='widthTwenty inlineBlock centerText'>
+<!--       <div class='widthTwenty inlineBlock centerText'>
         <span id='showAll' class='pointer medFont blueText dashBorder hidden'>Show all</span>
-      </div>
-      <div id='showNew' class='widthEighty inlineBlock centerText'>
+      </div> -->
+      <div id='showNew' class='centerText'>
         <span id='showNewText' class='pointer medFont blueText dashBorder hidden'>Load new tweets</span>
       </div>
       </div>

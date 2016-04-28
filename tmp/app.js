@@ -8,13 +8,14 @@ $(document).ready(function(){
 
   setInterval(function(){checkForNew(currentStream)},updateSpeed);
 
-  $("body").on("click",".tweet",function(){
-    var selectedUser = $(this).find(".userName").text();
+  $("body").on("click",".userName",function(){
+    var selectedUser = $(this).text().slice(1);
     currentStream = streams.users[selectedUser];
     update(currentStream);
-    $("#showAll").show();
-    $("#currentFilter").show();
+    // $("#showAll").show();
+    $("#currentFilter").slideDown();
     $("#filteredUser").text(selectedUser);
+    $("#inputWrapper").slideUp();
   });
   
   $("#newInputText").on("keydown",function(event){
@@ -34,12 +35,13 @@ $(document).ready(function(){
   $("#showAll").on("click",function(){
     currentStream = defaultStream;
     update(currentStream);
-    $(this).hide();
-    $("#currentFilter").hide();
+    // $(this).hide();
+    $("#currentFilter").slideUp();
+    $("#inputWrapper").slideDown();
   });
 
   function addNewTweet(){
-    var userName = $("#userName").val();
+    var userName = $("#userName").text();
     if(userName !== "") {
       visitor = userName;
     } else {
@@ -62,10 +64,10 @@ $(document).ready(function(){
     var newNumber = stream.length;
     var diff = newNumber - currentTweets;
     if(currentTweets < newNumber){
-      $("#showNewText").show();
+      $("#showNewText").slideDown();
       $("#showNewText").text("Load " + diff + " new tweets");
     } else {
-      $("#showNewText").hide();
+      $("#showNewText").slideUp();
     }
   }
 
@@ -76,12 +78,12 @@ $(document).ready(function(){
     var index = stream.length - 1;
     while(index >= 0){
       var tweet = stream[index];
-      var $tweet = $("<div class='tweet padTwentyFive overflowAuto pointer'></div>");
+      var $tweet = $("<div class='tweet padTwentyFive overflowAuto'></div>");
       var $userWrapper = $("<div class='widthTwenty centerText left'></div>");
       var $icon = $("<div id='icon' class='darkGreyBack'></div>");
-      var $user = $("<p class='userName pointer blueText boldFont'></p> ");
-      $user.text(tweet.user);
-      var $time = $("<p class='blueText'></p>");
+      var $user = $("<p class='userName pointer blueText boldFont underLined padFive'></p> ");
+      $user.text("@" + tweet.user);
+      var $time = $("<p class='blueText padFive'></p>");
       var time = " " + moment(tweet.created_at).fromNow();
       $time.text(time);
       var $message = $("<div class='right message bigFont whiteBack padFive widthEighty heightOneHundred'></div>");

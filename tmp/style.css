@@ -24,32 +24,53 @@
   margin: auto;
 }
 
-#newInputText {
-  width: 78%;
-}
-
-#newInputButton {
-  width: 20%;
-}
-
 #icon {
   width: 100px;
   height: 100px;
+}
+
+#userName:focus {
+  color: black;
+  background-color: white;
+}
+
+#userName:hover {
+  color: black;
+  background-color: white;
+}
+
+.underLined {
+  text-decoration: underline;
 }
 
 .pointer {
   cursor: pointer;
 }
 
+.alphaFifty {
+  opacity: 0.5;
+}
+
 .inlineBlock {
   display: inline-block;
 }
+
 .widthTwenty {
-  width: 20%;
+  width: 18%;
+  min-width: 18%;
+  max-width: 18%;
+}
+
+.widthThirty {
+  width: 29%;
+}
+
+.widthSixty {
+  width: 55%;
 }
 
 .widthEighty {
-  width: 78%;
+  width: 79%;
 }
 
 .widthOneHundred {
@@ -116,7 +137,7 @@
 }
 
 .tweet:hover {
-  background-color: #ececec;
+  background-color: #e5e5e5;
 }
 
 .darkGreyBack {
