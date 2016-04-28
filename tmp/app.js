@@ -1,17 +1,14 @@
 $(document).ready(function(){
-  var updateSpeed = 500;
-  var defaultStream = streams.home;
-  var currentStream = defaultStream;
-  var currentTweets = 0;
+  // load the first round of tweets.
+  app.update(app.currentStream);
 
-  update(currentStream);
-
-  setInterval(function(){checkForNew(currentStream)},updateSpeed);
+  // check to see if new tweets have been submitted
+  setInterval(function(){app.checkForNew(app.currentStream)},app.updateSpeed);
 
   $("body").on("click",".userName",function(){
     var selectedUser = $(this).text().slice(1);
-    currentStream = streams.users[selectedUser];
-    update(currentStream);
+    app.currentStream = streams.users[selectedUser];
+    app.update(app.currentStream);
 
     var $icon = $("#heroIcon");
     $icon.jdenticon(md5(selectedUser));
@@ -23,24 +20,32 @@ $(document).ready(function(){
   
   $("#newInputText").on("keydown",function(event){
     if(event.which === 13) { // check if enter key is pressed.
-      addNewTweet();
+      app.addNewTweet();
     }
   });
 
   $("#newInputButton").on("click",function(){
-    addNewTweet();
+    app.addNewTweet();
   });
 
   $("#showNewText").on("click",function(){
-    update(currentStream);
+    app.update(app.currentStream);
   });
 
   $("#showAll").on("click",function(){
-    currentStream = defaultStream;
-    update(currentStream);
+    app.currentStream = app.defaultStream;
+    app.update(app.currentStream);
     $("#currentFilter").slideUp();
     $("#inputWrapper").slideDown();
   });
+});
+
+
+var app = (function(){
+  var updateSpeed = 500;
+  var defaultStream = streams.home;
+  var currentStream = defaultStream;
+  var currentTweets = 0;
 
   function addNewTweet(){
     var userName = $("#userName").text();
@@ -100,4 +105,14 @@ $(document).ready(function(){
       index -= 1;
     }
   }
-});
+
+  return {
+    update: update,
+    checkForNew: checkForNew,
+    addNewTweet: addNewTweet,
+    updateSpeed: updateSpeed,
+    defaultStream: defaultStream,
+    currentStream: currentStream,
+    currentTweets: currentTweets
+  }
+})();
