@@ -12,7 +12,10 @@ $(document).ready(function(){
     var selectedUser = $(this).text().slice(1);
     currentStream = streams.users[selectedUser];
     update(currentStream);
-    // $("#showAll").show();
+
+    var $icon = $("#heroIcon");
+    $icon.jdenticon(md5(selectedUser));
+
     $("#currentFilter").slideDown();
     $("#filteredUser").text(selectedUser);
     $("#inputWrapper").slideUp();
@@ -28,14 +31,13 @@ $(document).ready(function(){
     addNewTweet();
   });
 
-  $("#showNew").on("click",function(){
+  $("#showNewText").on("click",function(){
     update(currentStream);
   });
 
   $("#showAll").on("click",function(){
     currentStream = defaultStream;
     update(currentStream);
-    // $(this).hide();
     $("#currentFilter").slideUp();
     $("#inputWrapper").slideDown();
   });
@@ -80,7 +82,8 @@ $(document).ready(function(){
       var tweet = stream[index];
       var $tweet = $("<div class='tweet padTwentyFive overflowAuto'></div>");
       var $userWrapper = $("<div class='widthTwenty centerText left'></div>");
-      var $icon = $("<div id='icon' class='darkGreyBack'></div>");
+      var $icon = $("<canvas width='100' height='100' id='icon' class='whiteBack' />");
+      $icon.jdenticon(md5(tweet.user));
       var $user = $("<p class='userName pointer blueText boldFont underLined padFive'></p> ");
       $user.text("@" + tweet.user);
       var $time = $("<p class='blueText padFive'></p>");
