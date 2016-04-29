@@ -18,41 +18,29 @@
   <div id='wrapper' class='greyBack'>
     <div id='newTweet' class='blueBack'>
       <div id='inputWrapper'>
-        <!-- <input type='text' placeholder='Enter your user name' class='bigFont noBorder padFive widthOneHundred' id='userName'> -->
-        <span class='whiteText bigFont padFive widthTwenty'>
-          @ <span contenteditable='true' id='userName'>visitor</span> : 
-          <i class="fa fa-pencil-square-o alphaFifty" aria-hidden="true"></i>
+        <span class='whiteText padFive widthTwenty relative'>
+          <span class='bigFont'>@</span>
+          <input type='text' value='visitor' size='7' class='bigFont blueBack noBorder padFive whiteText widthTest' id="userName">
+          <i class="fa fa-pencil-square-o alphaFifty editIcon bigFont" aria-hidden="true"></i>
+          <span class='bigFont'> : </span>
         </span>
-        <input type='text' placeholder='Write a new tweet...' class='bigFont noBorder padFive widthSixty' id='newInputText'>
-        <input type='button' value='Post' class='bigFont whiteText greenBack noBorder padFive pointer widthTwenty' id='newInputButton'>
+        <input type='text' placeholder='Write a new tweet...' size='25' class='noBorder padFive bigFont' id='newInputText'>
+        <input type='button' value='Post' class='whiteText greenBack noBorder padFive pointer widthTwenty bigFont' id='newInputButton'>
       </div>
     </div>
     <div id='allAndNew'>
       <div id='currentFilter' class='centerText medFont whiteText blueBack padFifteen hidden relative'>
-        <span class='showAll topLeft padFive whiteBack blueText underLined pointer'> &lt back </span>
+        <span class='showAll topLeft padFive whiteBack blueText pointer'> &lt Back </span>
         <canvas width='150' height='150' id='heroIcon' class='whiteBack'></canvas>
         <p class='medFont'>@<span id='filteredUser'></span><p>
       </div>
       <div class='padTwentyFive'>
-<!--       <div class='widthTwenty inlineBlock centerText'>
-        <span id='showAll' class='pointer medFont blueText dashBorder hidden'>Show all</span>
-      </div> -->
       <div id='showNew' class='centerText'>
         <span id='showNewText' class='pointer medFont blueText dashBorder hidden'>Load new tweets</span>
       </div>
       </div>
     </div>
     <div id='tweets'>
-<!--       <div class='tweet padTwentyFive overflowAuto'>
-        <div class='widthTwenty centerText left'>
-          <div id='icon' class='darkGreyBack'></div>
-          <p class='userName blueText boldFont'>name</p>
-          <p class='blueText'>time</p>
-        </div>
-        <div class='right message bigFont whiteBack padFive widthEighty heightOneHundred'>
-          message goes here
-        </div>
-      </div> -->
     </div>
   </div>
 </body>

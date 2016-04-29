@@ -65,6 +65,16 @@
   display: inline-block;
 }
 
+.widthText {
+  width: 10px;
+}
+
+.moveLeft {
+/*  position: absolute;
+  left: 140px;
+  top: -5px;*/
+}
+
 .widthTwenty {
   width: 18%;
   min-width: 18%;
@@ -128,6 +138,12 @@
 
 .blueText {
   color: #437bae;
+}
+
+.blueLightText {
+  /*color: #6795BF;*/
+  /*color: #79ABD9;*/
+  color: #93C2ED;
 }
 
 .whiteText {

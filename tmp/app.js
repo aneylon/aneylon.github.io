@@ -4,6 +4,9 @@ $(document).ready(function(){
 
   // check to see if new tweets have been submitted
   setInterval(function(){app.checkForNew(app.currentStream)},app.updateSpeed);
+  $(".editIcon").on("click",function(){
+    $("#userName").focus();
+  });
 
   $("body").on("click",".userName",function(){
     var selectedUser = $(this).text().slice(1);
@@ -63,7 +66,7 @@ var app = (function(){
   var currentTweets = 0;
 
   function addNewTweet(){
-    var userName = $("#userName").text();
+    var userName = $("#userName").val();
     if(userName !== "") {
       visitor = userName;
     } else {
@@ -102,11 +105,11 @@ var app = (function(){
       var tweet = stream[index];
       var $tweet = $("<div class='tweet padTwentyFive overflowAuto'></div>");
       var $userWrapper = $("<div class='widthTwenty centerText left'></div>");
-      var $icon = $("<canvas width='100' height='100' id='icon' class='whiteBack icon' />");
+      var $icon = $("<canvas width='100' height='100' id='icon' class='pointer whiteBack icon' />");
       $icon.jdenticon(md5(tweet.user));
       var $user = $("<p class='userName pointer blueText boldFont underLined padFive'></p> ");
       $user.text("@" + tweet.user);
-      var $time = $("<p class='blueText padFive'></p>");
+      var $time = $("<p class='blueLightText padFive'></p>");
       var time = " " + moment(tweet.created_at).fromNow();
       $time.text(time);
       var $message = $("<div class='right message bigFont whiteBack padFive widthEighty heightOneHundred'></div>");
