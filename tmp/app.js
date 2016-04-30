@@ -1,39 +1,28 @@
+// set global variables
+var updateSpeed = 500;
+var defaultStream = streams.home;
+var currentStream = defaultStream;
+var currentTweets = 0;
+
 $(document).ready(function(){
   // load the first round of tweets.
-  app.update(app.currentStream);
+  app.update(currentStream);
 
   // check to see if new tweets have been submitted
-  setInterval(function(){app.checkForNew(app.currentStream)},app.updateSpeed);
+  setInterval(function(){app.checkForNew(currentStream)},updateSpeed);
+
   $(".editIcon").on("click",function(){
     $("#userName").focus();
   });
 
   $("body").on("click",".userName",function(){
     var selectedUser = $(this).text().slice(1);
-    app.currentStream = streams.users[selectedUser];
-    app.update(app.currentStream);
-
-    var $icon = $("#heroIcon");
-    $icon.jdenticon(md5(selectedUser));
-
-    $("#currentFilter").slideDown();
-    $("#filteredUser").text(selectedUser);
-    $("#inputWrapper").slideUp();
-    $("html, body").animate({ scrollTop: 0 },"slow");
+    app.selectStream(selectedUser);
   });
 
   $("body").on("click",".icon",function(){
     var selectedUser = $(this).parent().find(".userName").text().slice(1);
-    app.currentStream = streams.users[selectedUser];
-    app.update(app.currentStream);
-
-    var $icon = $("#heroIcon");
-    $icon.jdenticon(md5(selectedUser));
-
-    $("#currentFilter").slideDown();
-    $("#filteredUser").text(selectedUser);
-    $("#inputWrapper").slideUp();
-    $("html, body").animate({ scrollTop: 0 },"slow");
+    app.selectStream(selectedUser);
   });
   
   $("#newInputText").on("keydown",function(event){
@@ -47,23 +36,36 @@ $(document).ready(function(){
   });
 
   $("#showNewText").on("click",function(){
-    app.update(app.currentStream);
+    app.update(currentStream);
   });
 
   $(".showAll").on("click",function(){
-    app.currentStream = app.defaultStream;
-    app.update(app.currentStream);
-    $("#currentFilter").slideUp();
-    $("#inputWrapper").slideDown();
+    app.showAll();
   });
 });
 
 
 var app = (function(){
-  var updateSpeed = 500;
-  var defaultStream = streams.home;
-  var currentStream = defaultStream;
-  var currentTweets = 0;
+
+  function showAll(){
+    currentStream = defaultStream;
+    update(currentStream);
+    $("#currentFilter").slideUp();
+    $("#inputWrapper").slideDown();
+  }
+
+  function selectStream(selectedUser){
+    currentStream = streams.users[selectedUser];
+    update(currentStream);
+
+    var $icon = $("#heroIcon");
+    $icon.jdenticon(md5(selectedUser));
+
+    $("#currentFilter").slideDown();
+    $("#filteredUser").text(selectedUser);
+    $("#inputWrapper").slideUp();
+    $("html, body").animate({ scrollTop: 0 },"slow");
+  }
 
   function addNewTweet(){
     var userName = $("#userName").val();
@@ -88,6 +90,7 @@ var app = (function(){
   function checkForNew(stream){
     var newNumber = stream.length;
     var diff = newNumber - currentTweets;
+    console.log(currentTweets, newNumber, diff);
     if(currentTweets < newNumber){
       $("#showNewText").slideDown();
       $("#showNewText").text("Load " + diff + " new tweets");
@@ -126,11 +129,9 @@ var app = (function(){
 
   return {
     update: update,
+    showAll: showAll,
     checkForNew: checkForNew,
     addNewTweet: addNewTweet,
-    updateSpeed: updateSpeed,
-    defaultStream: defaultStream,
-    currentStream: currentStream,
-    currentTweets: currentTweets
+    selectStream: selectStream
   }
 })();
