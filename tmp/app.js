@@ -1,4 +1,3 @@
-// set global variables
 var updateSpeed = 500;
 var defaultStream = streams.home;
 var currentStream = defaultStream;
@@ -12,7 +11,12 @@ $(document).ready(function(){
   setInterval(function(){app.checkForNew(currentStream)},updateSpeed);
 
   $(".editIcon").on("click",function(){
+    $("#userName").prop("disabled",false);
     $("#userName").focus();
+  });
+
+  $("#userName").on("focusout",function(){
+    $(this).prop("disabled",true);
   });
 
   $("body").on("click",".userName",function(){
@@ -90,7 +94,6 @@ var app = (function(){
   function checkForNew(stream){
     var newNumber = stream.length;
     var diff = newNumber - currentTweets;
-    console.log(currentTweets, newNumber, diff);
     if(currentTweets < newNumber){
       $("#showNewText").slideDown();
       $("#showNewText").text("Load " + diff + " new tweets");
