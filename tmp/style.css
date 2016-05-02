@@ -33,12 +33,7 @@
   color: black;
   background-color: white;
 }
-/*
-#userName:hover {
-  color: black;
-  background-color: white;
-}
-*/
+
 .relative {
   position: relative;
 }
@@ -69,32 +64,12 @@
   width: 10px;
 }
 
-.moveLeft {
-/*  position: absolute;
-  left: 140px;
-  top: -5px;*/
-}
-
 .widthTwenty {
-  width: 18%;
-  min-width: 18%;
-  max-width: 18%;
-}
-
-.widthThirty {
-  width: 29%;
-}
-
-.widthSixty {
-  width: 55%;
+  width: 19%;
 }
 
 .widthEighty {
   width: 79%;
-}
-
-.widthOneHundred {
-  width: 98%;
 }
 
 .centerText {
@@ -116,6 +91,7 @@
 .heightOneHundred {
   height: 150px;
 }
+
 .noBorder {
   border: none;
 }
@@ -141,8 +117,6 @@
 }
 
 .blueLightText {
-  /*color: #6795BF;*/
-  /*color: #79ABD9;*/
   color: #93C2ED;
 }
 
