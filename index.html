@@ -1,188 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/railscasts.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    <link rel="icon" type="image/x-icon" href="img/NewFavicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Add jQuery library -->
-    <script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
-    <!-- Add mousewheel plugin (this is optional) -->
-    <script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
-    <!-- Add fancyBox main JS and CSS files -->
-    <script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
-    <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
-    <!-- Add Button helper (this is optional) -->
-    <link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-    <script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-    <!-- Add Thumbnail helper (this is optional) -->
-    <link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
-    <script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-    <!-- Add Media helper (this is optional) -->
-    <script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        $('.fancybox').fancybox();
-      });
-    </script>
-  </head>
-  <body>
-    <div id="header">
-      <h1 id="title">. arlen . neylon .</h1>
-      <h4 id="subTitle">. programmer . 3d artist . nerd .</h4>
-
-      <nav>
-        <ul>
-          <li>
-            <a href="">coding</a>
-            <a href="">games</a>
-            <a href="">languages</a>
-            <a href="">images</a>
-            <a href="">github</a>
-            <a href="">resume</a>
-            <a href="">contact</a>
-          </li>
-        </ul>
-      </nav>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> . arlen . neylon . </title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/NewFavicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="libs/highlightjs/styles/monokai.css">
+</head>
+<body>
+  <header id="header" class="text-center">
+    <div class="header-titles">
+      <h1> . arlen . neylon . </h1>
+      <h4> . programmer . 3d artist . nerd . </h3>
     </div>
-    <div id="bodyWrapper">
-<!--
-      <div class="updateWrapper">
-        <a class="fancybox updateImageLink" href="img/image.png" data-fancybox-group="gallery" title="test image">
-          <img class="updateImage" src="img/image.png" alt="" />
-        </a>
+    <ul id="navLinks" class="menu">
+      <p class="loading-text">
+        ...loading...
+      </p>
+    </ul>
+  </header>
 
-        <p class="updateTitle">title</p>
-        <p class="updateDate">##-##-##</p>
-        <p>
-        body text
-        </p>
-      </div>
--->
-      <div class="updateWrapper">
-        <a class="fancybox updateImageLink" href="img/WoodPlanksRender.png" data-fancybox-group="gallery" title="test image">
-          <img class="updateImage" src="img/WoodPlanksRender.png" alt="" />
-        </a>
-        <a class="fancybox updateImageLink" href="img/WoodPlanksDiffuse.png" data-fancybox-group="gallery" title="test image">
-          <img class="updateImage" src="img/WoodPlanksDiffuse.png" alt="" />
-        </a>
+  <section id="posts">
+    <p class="loading-text">
+      ...loading...
+    </p>
+  </section>
 
-        <p class="updateTitle">playing with manga studio and blender</p>
-        <p class="updateDate">aug-21-16</p>
-        <p>
-        haven't touched either in a while, so felt it was past time that a made a little thing.
-        </p>
-      </div>
+  <footer class="text-center">
+    all content copyright arlen neylon 2016
+  </footer>
 
-      <div class="updateWrapper">
-        <p class="updateTitle">LotHS</p>
-        <p class="updateDate">may-07-16</p>
-        <p>
-        a long long time ago i thought of a story.
-        <br>
-        this is no longer that story, but what that story became.
-        <br>
-        once it was going to be an animation. then a book. now it is a game.
-        <br>
-        or it will be. once i finish making it.
-        <br>
-        <a href="/LotHS">LotHS</a>
-        </p>
-      </div>
+  <div id="modal" class="modal">
+    <img id="modal-image" src="img/test1.png" alt="test1.png">
+  </div>
 
-      <div class="updateWrapper">
-        <p class="updateTitle">finance ipsum</p>
-        <p class="updateDate">may-07-16</p>
-        <p>
-        been thinking of doing this for awhile.
-        <br>
-        glad i finally got around to starting it.
-        <br>
-        <a href="/finance-ipsum">Finance Ipsum</a>
-        </p>
-      </div>
-
-      <div class="updateWrapper">
-        <a class="fancybox updateImageLink" href="img/FoggyThings.png" data-fancybox-group="gallery" title="test image">
-          <img class="updateImage" src="img/FoggyThings.png" alt="" />
-        </a>
-
-        <p class="updateTitle">something to do of a friday morning</p>
-        <p class="updateDate">may-06-16</p>
-        <p>
-        new background image for social media things.
-        </p>
-      </div>
-
-      <div class="updateWrapper">
-        <a class="fancybox updateImageLink" href="img/SelfPortrait01.png" data-fancybox-group="gallery" title="test image">
-          <img class="updateImage" src="img/SelfPortrait01.png" alt="" />
-        </a>
-
-        <p class="updateTitle">make user icons with javascript</p>
-        <p class="updateDate">apr-27-16</p>
-        <p>
-        <a href="https://jdenticon.com/">jdenticon.</a><br>
-        i really, really like this.
-        </p>
-      </div>
-
-      <div class="updateWrapper">
-        <a class="fancybox updateImageLink" href="img/SelfPortrait01.png" data-fancybox-group="gallery" title="place holder image">
-          <img class="updateImage" src="img/SelfPortrait01.png" alt="" />
-        </a>
-
-        <p class="updateTitle">fully hosted on github</p>
-        <p class="updateDate">mar-18-16</p>
-        <p>
-        canceled old hosting and began moving over to github pages. currently no real content has been moved over.<br>
-        hopefully will begin the migration this weekend.
-        </p>
-      </div>
-
-      <div class="updateWrapper">
-        <p class="updateTitle">highlight.js</p>
-        <p class="updateDate">feb-26-16</p>
-        <p>
-        been thinking about looking for this for awhile.
-        found a nice library for code highlighting.
-        <a href="https://highlightjs.org">highlight.js</a>
-        check it out if you have an interest.
-        </p>
-        <pre>
-        <code class="javascript">
-          var thing = function (param) {
-            console.log("whatever man");
-          }
-
-        </code>
-        </pre>
-      </div>
-
-
-      <div class="updateWrapper">
-        <a class="fancybox updateImageLink" href="img/SelfPortrait01.png" data-fancybox-group="gallery" title="place holder image">
-          <img class="updateImage" src="img/SelfPortrait01.png" alt="" />
-        </a>
-
-        <p class="updateTitle">new layout</p>
-        <p class="updateDate">feb-22-16</p>
-        <p>
-        half way through MakerSquare and starting the job search process. as part of that i decided it was past time to update the old web page. cleaned up the html and css and thinking about completely migrating to github pages.
-        </p>
-      </div>
-
-    </div>
-
-    <div id="footer">
-      <p class="footerText">all content copy right arlen neylon two thousand and sixteen</p>
-    </div>
-  </body>
+  <script src="libs/jquery.js"></script>
+  <script src="libs/underscore.js"></script>
+  <script src="libs/backbone.js"></script>
+  <script src="libs/firebase.js"></script>
+  <script src="libs/backbonefire.js"></script>
+  <script src="libs/highlight.pack.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/appBb.js"></script>
+</body>
 </html>
