@@ -1,6 +1,4 @@
 A#1 - Images and Projects views
-  - readme - homepage vs project
-  - Change fb url
   - copy old post info and images
   - clean up css / other code
   x modal for images
