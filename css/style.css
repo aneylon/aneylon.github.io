@@ -41,7 +41,7 @@ body {
 .image-post {
   margin: 5px;
   padding: 5px;
-  /*float: left;*/
+  float: left;
   overflow: auto;
 }
 
