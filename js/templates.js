@@ -1,7 +1,8 @@
 var projectsTemp = `
 <div class="post">
+  <div class="post-title"><%= title %></div>
+  <div class="spacer"></div>
   <img src="<%- \'img/\' + image %>" alt="<%= image %>" class="post-img" />
-  <h1 class="post-title"><%= title %></h1>
   <div class="post-content"><%= description %></div>
 </div>
 `
@@ -29,7 +30,9 @@ var postTemplate = `
   <div class="post-title"><%= title %></div>
   <div class="post-date"><%= date %></div>
   <div class="spacer"></div>
-  <img src="<%- \'img/\'+ images %>" alt="<%= images %>" class="post-img"/>
+  <% if(images !== ''){ %>
+    <img src="<%- \'img/\'+ images %>" alt="<%= images %>" class="post-img"/>
+  <% } %>
   <div class="post-content"><%= content %></div>
   <div class="post-tags"><%= tags.join(", ") %></div>
 </div>

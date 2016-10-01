@@ -2,7 +2,6 @@ var fbURL = 'https://arlen-home.firebaseio.com'
 var blogName = 'myBackBoneBlog'
 var token
 var date
-// var fireBaseRef = new Firebase('https://flickering-torch-4028.firebaseio.com')
 
 $(function(){
   setDate()
