@@ -17,7 +17,7 @@ var AdminView = Backbone.View.extend({
     setTimeout(()=>{
       checkLogin()
       setDate()
-    },0)
+    },1000)
     return this
   }
 })

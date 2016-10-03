@@ -2,7 +2,9 @@ var projectsTemp = `
 <div class="post">
   <div class="post-title"><%= title %></div>
   <div class="spacer"></div>
-  <img src="<%- \'img/\' + image %>" alt="<%= image %>" class="post-img" />
+  <% if(image !== ''){ %>
+    <img src="<%- \'img/\' + image %>" alt="<%= image %>" class="post-img" />
+  <% } %>
   <div class="post-content"><%= description %></div>
 </div>
 `
