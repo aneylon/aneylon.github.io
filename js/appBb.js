@@ -124,12 +124,12 @@ var ProjectView = Backbone.View.extend({
 var ProjectsView = Backbone.View.extend({
   render: function(){
     this.$el.html('')
-    var rev = []
-    this.collection.forEach(function(item){
-      rev.unshift(item)
-    })
+    // var rev = []
     // this.collection.forEach(function(item){
-    rev.forEach(function(item){
+    //   rev.unshift(item)
+    // })
+    // rev.forEach(function(item){
+    this.collection.forEach(function(item){
       var projectView = new ProjectView({ model: item })
       this.$el.append(projectView.render().$el)
     }, this)
