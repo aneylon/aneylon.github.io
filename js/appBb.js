@@ -71,6 +71,7 @@ var Image = Backbone.Model.extend({
 })
 
 var Images = Backbone.Firebase.Collection.extend({
+  // url: new Firebase(fbURL + '/images').orderByChild('order'),
   url: fbURL + '/images',
   model: Image
 })
@@ -86,7 +87,12 @@ var ImageView = Backbone.View.extend({
 var ImagesView = Backbone.View.extend({
   render: function(){
     this.$el.html('')
+
+    var rev = []
     this.collection.forEach(function(item){
+      rev.unshift(item)
+    })
+    rev.forEach(function(item){
       var imageView = new ImageView({ model : item })
       this.$el.append(imageView.render().$el)
     }, this)
@@ -118,7 +124,12 @@ var ProjectView = Backbone.View.extend({
 var ProjectsView = Backbone.View.extend({
   render: function(){
     this.$el.html('')
+    var rev = []
     this.collection.forEach(function(item){
+      rev.unshift(item)
+    })
+    // this.collection.forEach(function(item){
+    rev.forEach(function(item){
       var projectView = new ProjectView({ model: item })
       this.$el.append(projectView.render().$el)
     }, this)
