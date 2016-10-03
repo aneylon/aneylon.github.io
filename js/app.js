@@ -27,14 +27,17 @@ var hideImage = function(){
 
 var checkLogin = function(){
   if(token){
+    console.log('token exists')
     var fbRef = new Firebase(fbURL)
     fbRef.authWithCustomToken(token, function(err, authData){
       if(err) console.log('error', err)
       else{
+        console.log('logged in')
         showLoginView()
       }
     })
   } else {
+    console.log('no token')
     showLogoutView()
   }
 }
