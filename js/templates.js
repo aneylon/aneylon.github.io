@@ -17,7 +17,7 @@ var imagesTemp = `
 
 var aboutTemp = `
 <div class="about">
-  <img src="img/SelfPortrait02.png" />
+  <img src="img/SelfPortrait02.jpg" />
   <h1>About me</h1>
   <p>I live and work in San Francisco doing <a href="/#projects">computer stuff.</a></p>
   <p>Most of which you can check out on <a href="https://www.github.com/aneylon">github</a> as well.</p>
