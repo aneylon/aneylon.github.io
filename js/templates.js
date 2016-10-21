@@ -17,13 +17,14 @@ var imagesTemp = `
 
 var aboutTemp = `
 <div class="about">
-  <img src="img/SelfPortrait01.png" />
+  <img src="img/SelfPortrait02.png" />
   <h1>About me</h1>
   <p>I live and work in San Francisco doing <a href="/#projects">computer stuff.</a></p>
-  <p>I like languages and tromping through the woods.</p>
+  <p>Most of which you can check out on <a href="https://www.github.com/aneylon">github</a> as well.</p>
+  <p>I like learning languages and tromping through the woods.</p>
   <p>Sometimes I <a href="/#images">scribble</a> in either 2 or 3d.</p>
   <p>You can follow me on <a href="http://twitter.com/ArlenNeylon">Twitter</a> if you like.</p>
-  <p>Or contact me through <a href="http://linkedin.com/in/arlenneylon">LinkedIn.</a></p>
+  <p>Or contact me through <a href="http://linkedin.com/in/arlenneylon">LinkedIn</a> if you would like to work with me.</p>
 </div>
 `
 
