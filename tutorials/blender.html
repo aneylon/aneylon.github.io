@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blender Notes</title>
+</head>
+<body>
+
+  <div>
+    <h1>Transparent Setup</h1>
+    <pre>
+    Material Settings
+     - Transparency : Checked
+      - Alpha : 0.0
+
+    - Texture
+     - Image
+      - Use Alpha : Checked
+     - Influence
+      - Alpha : 1.0
+
+    Receiving Material Setup
+    - Shadow
+     - Receive Transparent
+   </pre>
+  </div>
+
+  <div>
+    <h1>Internal Renderer settings</h1>
+    <pre>
+     - World
+      - Real Sky : Checked
+     - Environment Lighting : Checked
+      - Environment Color : Sky Texture
+     - Gather
+      - Samples : ~ 12 ~ 16 +
+
+     - World Texture
+      - Mapping : AngMap / Equirectangular ?
+      - Influnce : Horizon = 1.0
+    </pre>
+  </div>
+
+  <div>
+    <h1>HDRI / Env Sphere Painting</h1>
+    <pre>
+      create sphere
+      unwrap with sphere projection
+      filp normals
+      change view to texture
+      material shadeless
+      texture paint mode
+      add paint slot 2048x2
+      Properties > Shading > Backface Culling : On
+      In UV / Image Editor : Switch to Paint Mode
+
+      Save when done.
+    </pre>
+  </div>
+
+  <div>
+    <h1>Rigging</h1>
+    <p></p>
+  </div>
+
+</body>
+</html>
