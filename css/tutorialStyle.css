@@ -1,0 +1,31 @@
+* {
+  font-family: sans-serif;
+}
+.tutorial {
+  background-color: dimgrey;
+  margin: auto;
+  width: 850px;
+  margin-top: 50px;
+}
+
+.backButton {
+  float: right;
+  padding: 5px;
+  margin: 5px;
+  background-color: lightgrey;
+  color: black;
+  border-radius: 5px;
+}
+
+.tutorial div {
+  border: black solid 3px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: darkgrey;
+  color: black;
+}
+
+h1 {
+  text-decoration: underline;
+}
