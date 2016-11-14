@@ -24,7 +24,8 @@ var aboutTemp = `
   <p>I like learning languages and tromping through the woods.</p>
   <p>Sometimes I <a href="/#images">scribble</a> in either 2 or 3d.</p>
   <p>You can follow me on <a href="http://twitter.com/ArlenNeylon">Twitter</a> if you like.</p>
-  <p>Or contact me through <a href="http://linkedin.com/in/arlenneylon">LinkedIn</a> if you would like to work with me.</p>
+  <p>Contact me through <a href="http://linkedin.com/in/arlenneylon">LinkedIn</a> if you would like to work with me.</p>
+  <p>Or contact me <a href="mailto:arlen.m.neylon@gmail.com">directly</a></p>
 </div>
 `
 
