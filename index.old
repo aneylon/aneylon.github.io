@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> . arlen . neylon . </title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/NewFavicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="libs/monokai.css">
+</head>
+<body>
+  <header id="header" class="text-center">
+    <div class="header-titles">
+      <h1> . arlen . neylon . </h1>
+      <h4> . programmer . 3d artist . nerd . </h3>
+    </div>
+    <ul id="navLinks" class="menu">
+      <p class="loading-text">
+        ...loading...
+      </p>
+    </ul>
+  </header>
+
+  <section id="posts">
+    <p class="loading-text">
+      ...loading...
+    </p>
+  </section>
+
+  <footer class="text-center">
+    all content copyright arlen neylon 2016
+  </footer>
+
+  <div id="modal" class="modal">
+    <img id="modal-image" src="" alt="">
+  </div>
+
+  <script src="libs/jquery.min.js"></script>
+  <script src="libs/underscore-min.js"></script>
+  <script src="libs/backbone-min.js"></script>
+  <script src="libs/firebase.js"></script>
+  <script src="libs/backbonefire.min.js"></script>
+  <script src="libs/highlight.pack.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/appBb.js"></script>
+</body>
+</html>
