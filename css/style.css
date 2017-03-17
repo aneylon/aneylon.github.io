@@ -15,7 +15,7 @@ header {
 }
 
 header h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -24,16 +24,29 @@ header h3 {
   color: #bbb;
   margin-top: 5px;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 header p {
   margin: auto;
   font-size: 1em;
-  max-width: 350px;
+  max-width: 325px;
   text-align: left;
   background: #555;
   padding: 15px;
+}
+
+.back-link {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+}
+.back-link:hover {
+  background: #666;
+  color: #ddd;
 }
 
 .link-list {
@@ -79,4 +92,48 @@ header p {
 }
 .portfolio-list li:hover {
   background: #ddd;
+}
+.portfolio-list h1 {
+  text-align: center;
+}
+.portfolio-list img {
+  display: block;
+  margin: auto;
+  max-width: 200px;
+}
+.portfolio-list a {
+  color: #000;
+}
+.portfolio-list a:hover {
+  color: #333;
+}
+.portfolio-list li a:nth-of-type(2) {
+  vertical-align: text-bottom;
+}
+
+#images {
+  width: 850px;
+  margin: auto;
+}
+#images > h1 {
+  font-size: 2em;
+  text-align: center;
+}
+.image-list {
+  text-align: center;
+}
+.image-list li {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  background: #666;
+}
+.image-list li:hover {
+  background: #999;
+}
+.image-list a {
+  border: 0px;
+}
+.image-list img {
+  max-height: 100px;
 }
