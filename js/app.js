@@ -1,36 +1,116 @@
 function load(){
-  // loadElement(test, testTmp, 'testContent')
-  // loadElement(projects, projTmp, 'projectsContent')
-  // loadElement(images, imgTmp, 'imagesContent')
+  loadElement(links, linksTmp, 'headerLinks')
+  loadElement(projects, projTmp, 'projectsContent')
+  loadElement(images, imgTmp, 'imagesList')
 }
 
 function loadElement(data, template, elementId){
-  console.log(data)
-  var output = ''
-  for(var key in data){
+  template = _.template(template)
+  var output = data.reduce((acc, cur) => {
+    acc += template(cur)
+    return acc
+  }, '')
 
-  }
-  document.getElementById(elementId).innerHTML = 'this is a test'
+  document.getElementById(elementId).innerHTML = output
 }
 
-var test = [
-  {content: 'stuff'},
-  {content: 'moreStuff'},
-  {content: 'evenMoreStuff'}
+var links = [
+  {
+    url: '#portfolio',
+    text: 'Portfolio'
+  },
+  {
+    url: 'http://www.github.com/aneylon',
+    text: 'Github'
+  },
+  {
+    url: 'mailto:arlen.m.neylon@gmail.com',
+    text: 'Mail'
+  },
+  {
+    url: '#images',
+    text: 'Images'
+  },
 ]
 
-var testTmp = `<li></li>`
+var linksTmp = `
+  <li>
+    <a href="<%= url %>">
+      <%= text %>
+    </a>
+  </li>`
 
 var projects = [
-  {name: 'one-name', desc: 'one-desc', imgUrl: 'one-img', link: 'one-link', github: 'one-git'},
+    {
+      url: 'http://things-near-me.herokuapp.com/',
+      name: 'Things Near Me',
+      thumbnailUrl: 'img/ThingsNearMe_thumb.jpg',
+      alt: '',
+      description: 'Post and search events by zipcode.',
+      gitUrl: 'http://github.com/aneylon/things-near-me'
+    },
+    {
+      url: 'http://arlen-neylon.com/learn-to-count',
+      name: 'Learn to Count',
+      thumbnailUrl: 'img/LearnToCount_thumb.jpg',
+      alt: '',
+      description: 'Learning to count in a foriegn language can be a pain. Use this app to help take the edge off.',
+      gitUrl: 'http://github.com/aneylon/learn-to-count'
+    },
+    {
+      url: 'http://finance-ipsum.herokuapp.com',
+      name: 'Finance Ipsum',
+      thumbnailUrl: 'img/FinanceIpsum_thumb.jpg',
+      alt: '',
+      description: 'Generate filler text for your fin-tech mockup.',
+      gitUrl: 'http://github.com/aneylon/finance-ipsum'
+    },
 ]
 
-var projTmp = ``
+var projTmp = `
+      <li>
+        <a href="<%= url %>">
+          <h1><%= name %></h1>
+        </a>
+        <img src="<%= thumbnailUrl %>" alt="<%= alt %>">
+        <p><%= description %></p>
+        <a href="<%= gitUrl %>">View the code on Github</a>
+      </li>`
 
 var images = [
-  {url: 'url', alt: 'desc'},
+  {
+    imgUrl: 'img/newYear2017.jpg',
+    thumbnailUrl: 'img/newYear2017_thumb.jpg',
+    alt: 'New Year 2017'
+  },
+  {
+    imgUrl: 'img/SelfPortrait02.jpg',
+    thumbnailUrl: 'img/SelfPortrait02_thumb.jpg',
+    alt: 'Self Portrait'
+  },
+  {
+    imgUrl: 'img/WesternBG.jpg',
+    thumbnailUrl: 'img/WesternBG_thumb.jpg',
+    alt: 'Western Background'
+  },
+  {
+    imgUrl: 'img/FoggyThings.png',
+    thumbnailUrl: 'img/FoggyThings_thumb.jpg',
+    alt: 'Foggy Things'
+  },
+  {
+    imgUrl: 'img/LowPolyPlanet_01.jpg',
+    thumbnailUrl: 'img/LowPolyPlanet_01_thumb.jpg',
+    alt: 'Low Poly Planet'
+  },
 ]
 
-var imgTmp = ``
+var imgTmp = `
+  <li>
+    <a href="<%= imgUrl %>">
+      <img src="<%= thumbnailUrl %>" alt="<%= alt %>">
+    </a>
+  </li>`
+
 
 document.onload = load()
