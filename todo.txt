@@ -1,3 +1,12 @@
+*** NEW ***
+js load element test
+
+
+xthumbnails
+xlinks to images
+
+
+*** OLD ***
 A#1 - Images and Projects views
   - copy old post info and images
   - clean up css / other code
