@@ -50,6 +50,14 @@ var projects = [
       gitUrl: 'http://github.com/aneylon/things-near-me'
     },
     {
+      url: 'http://finance-ipsum.herokuapp.com',
+      name: 'Finance Ipsum',
+      thumbnailUrl: 'img/FinanceIpsum_thumb.jpg',
+      alt: '',
+      description: 'Generate filler text for your fin-tech mockup.',
+      gitUrl: 'http://github.com/aneylon/finance-ipsum'
+    },
+    {
       url: 'http://arlen-neylon.com/learn-to-count',
       name: 'Learn to Count',
       thumbnailUrl: 'img/LearnToCount_thumb.jpg',
@@ -58,13 +66,14 @@ var projects = [
       gitUrl: 'http://github.com/aneylon/learn-to-count'
     },
     {
-      url: 'http://finance-ipsum.herokuapp.com',
-      name: 'Finance Ipsum',
-      thumbnailUrl: 'img/FinanceIpsum_thumb.jpg',
+      url: 'http://arlen-neylon.com/LangApp',
+      name: 'Language App',
+      thumbnailUrl: 'img/LangApp_thumb.jpg',
       alt: '',
-      description: 'Generate filler text for your fin-tech mockup.',
-      gitUrl: 'http://github.com/aneylon/finance-ipsum'
+      description: 'The app that started it all. Vanilla flash card like app for learning vocabulary.',
+      gitUrl: 'http://github.com/aneylon/LangApp'
     },
+
 ]
 
 var projTmp = `
