@@ -45,7 +45,7 @@ var projects = [
       url: 'http://things-near-me.herokuapp.com/',
       name: 'Things Near Me',
       thumbnailUrl: 'img/ThingsNearMe_thumb.jpg',
-      alt: '',
+      alt: 'Things Near Me',
       description: 'Post and search events by zipcode.',
       gitUrl: 'http://github.com/aneylon/things-near-me'
     },
@@ -53,7 +53,7 @@ var projects = [
       url: 'http://finance-ipsum.herokuapp.com',
       name: 'Finance Ipsum',
       thumbnailUrl: 'img/FinanceIpsum_thumb.jpg',
-      alt: '',
+      alt: 'Finance Ipsum',
       description: 'Generate filler text for your fin-tech mockup.',
       gitUrl: 'http://github.com/aneylon/finance-ipsum'
     },
@@ -61,7 +61,7 @@ var projects = [
       url: 'http://arlen-neylon.com/learn-to-count',
       name: 'Learn to Count',
       thumbnailUrl: 'img/LearnToCount_thumb.jpg',
-      alt: '',
+      alt: 'Learn to Count',
       description: 'Learning to count in a foriegn language can be a pain. Use this app to help take the edge off.',
       gitUrl: 'http://github.com/aneylon/learn-to-count'
     },
@@ -69,9 +69,17 @@ var projects = [
       url: 'http://arlen-neylon.com/LangApp',
       name: 'Language App',
       thumbnailUrl: 'img/LangApp_thumb.jpg',
-      alt: '',
+      alt: 'Language App',
       description: 'The app that started it all. Vanilla flash card like app for learning vocabulary.',
       gitUrl: 'http://github.com/aneylon/LangApp'
+    },
+    {
+      url: 'http://arlen-neylon.com/color-picker',
+      name: 'Color Picker',
+      thumbnailUrl: 'img/ColorPicker_thumb.jpg',
+      alt: 'Color Picker',
+      description: 'Generate random color schemes.',
+      gitUrl: 'http://github.com/aneylon/color-picker'
     },
 
 ]
@@ -81,7 +89,9 @@ var projTmp = `
         <a href="<%= url %>">
           <h1><%= name %></h1>
         </a>
+        <a href="<%= url %>">
         <img src="<%= thumbnailUrl %>" alt="<%= alt %>">
+        </a>
         <p><%= description %></p>
         <a href="<%= gitUrl %>">View the code on Github</a>
       </li>`
@@ -120,6 +130,7 @@ var imgTmp = `
       <img src="<%= thumbnailUrl %>" alt="<%= alt %>">
     </a>
   </li>`
+  // <p><%= alt %>
 
 
 document.onload = load()

@@ -135,5 +135,11 @@ header p {
   border: 0px;
 }
 .image-list img {
+  padding: 5px;
   max-height: 100px;
+}
+.image-list p {
+  color: #fff;
+  padding: 3px;
+  margin: 3px;
 }
