@@ -16,8 +16,8 @@ function loadElement(data, template, elementId){
 
 var links = [
   {
-    url: '#portfolio',
-    text: 'Portfolio'
+    url: '#projects',
+    text: 'Projects'
   },
   {
     url: 'http://www.github.com/aneylon',

@@ -34,6 +34,8 @@ header p {
   text-align: left;
   background: #555;
   padding: 15px;
+  border-bottom: solid deepskyblue 1px;
+  border-top: solid deepskyblue 1px;
 }
 
 .back-link {
@@ -59,7 +61,8 @@ header p {
 .link-list a {
   display: inline-block;
   background: #ddd;
-  border-bottom: limegreen 2px solid;
+  border-bottom: lime 1px solid;
+  border-top: lime 1px solid;
   padding: 5px;
   margin: 5px;
   width: 100px;
@@ -72,7 +75,7 @@ header p {
   background: #aaa;
 }
 
-#portfolio > h1 {
+#projects > h1 {
   font-size: 2em;
   text-align: center;
 }
