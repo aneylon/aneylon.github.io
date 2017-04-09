@@ -58,14 +58,6 @@ var projects = [
       gitUrl: 'http://github.com/aneylon/finance-ipsum'
     },
     {
-      url: 'http://arlen-neylon.com/learn-to-count',
-      name: 'Learn to Count',
-      thumbnailUrl: 'img/LearnToCount_thumb.jpg',
-      alt: 'Learn to Count',
-      description: 'Learning to count in a foriegn language can be a pain. Use this app to help take the edge off.',
-      gitUrl: 'http://github.com/aneylon/learn-to-count'
-    },
-    {
       url: 'http://arlen-neylon.com/LangApp',
       name: 'Language App',
       thumbnailUrl: 'img/LangApp_thumb.jpg',
@@ -74,12 +66,28 @@ var projects = [
       gitUrl: 'http://github.com/aneylon/LangApp'
     },
     {
+      url: 'http://arlen-neylon.com/learn-to-count',
+      name: 'Learn to Count',
+      thumbnailUrl: 'img/LearnToCount_thumb.jpg',
+      alt: 'Learn to Count',
+      description: 'Learning to count in a foriegn language can be a pain. Use this app to help take the edge off.',
+      gitUrl: 'http://github.com/aneylon/learn-to-count'
+    },
+    {
       url: 'http://arlen-neylon.com/color-picker',
       name: 'Color Picker',
       thumbnailUrl: 'img/ColorPicker_thumb.jpg',
       alt: 'Color Picker',
       description: 'Generate random color schemes.',
       gitUrl: 'http://github.com/aneylon/color-picker'
+    },
+    {
+      url: 'http://arlen-neylon.com/dice',
+      name: 'Dice Roller',
+      thumbnailUrl: 'img/Dice_thumb.jpg',
+      alt: 'Dice Roller',
+      description: 'Roll any number of dice of any denomination and add a modifier.',
+      gitUrl: 'http://github.com/aneylon/dice'
     },
 
 ]
