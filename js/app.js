@@ -24,6 +24,10 @@ var links = [
     text: 'Github'
   },
   {
+    url: 'http://www.linkedin.com/in/arlenneylon',
+    text: 'Linkedin'
+  },
+  {
     url: 'mailto:arlen.m.neylon@gmail.com',
     text: 'Mail'
   },

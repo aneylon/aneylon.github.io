@@ -51,14 +51,27 @@ header p {
   color: #ddd;
 }
 
-.link-list {
-  text-align: center;
+.listContainer {
+  max-width: 850px;
+  margin: auto;
+}
+
+.listContainer ul {
   list-style-type: none;
+  text-align: center;
 }
-.link-list li {
+
+.listContainer li {
   display: inline-block;
+  margin: 10px;
 }
-.link-list a {
+
+.listContainer > h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+#headerLinks a {
   display: inline-block;
   background: #ddd;
   border-bottom: lime 1px solid;
@@ -71,21 +84,11 @@ header p {
   color: #222;
   font-size: 1.25em;
 }
-.link-list a:hover {
+#headerLinks a:hover {
   background: #aaa;
 }
 
-#projects > h1 {
-  font-size: 2em;
-  text-align: center;
-}
-.portfolio-list {
-  display: table;
-  margin: auto;
-  max-width: 850px;
-}
 .portfolio-list li{
-  display: inline-block;
   margin: 10px;
   padding: 10px;
   width: 225px;
@@ -110,23 +113,8 @@ header p {
 .portfolio-list a:hover {
   color: #333;
 }
-.portfolio-list li a:nth-of-type(2) {
-  vertical-align: text-bottom;
-}
 
-#images {
-  width: 850px;
-  margin: auto;
-}
-#images > h1 {
-  font-size: 2em;
-  text-align: center;
-}
-.image-list {
-  text-align: center;
-}
 .image-list li {
-  display: inline-block;
   padding: 5px;
   margin: 5px;
   background: #666;
