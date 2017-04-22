@@ -1,3 +1,19 @@
+var modalIsVisible = false
+function toggleImgModal() {
+  modalIsVisible = !modalIsVisible
+  if(modalIsVisible){
+    document.getElementById('imgModal').style.display = 'initial'
+  } else {
+    document.getElementById('imgModal').style.display = 'none'
+  }
+}
+
+function showImage(img){
+  console.log(img)
+  document.getElementById('imgModalImg').src = img
+  toggleImgModal()
+}
+
 function load(){
   loadElement(links, linksTmp, 'headerLinks')
   loadElement(projects, projTmp, 'projectsContent')
@@ -136,11 +152,11 @@ var images = [
   },
 ]
 
+// <a href="<%= imgUrl %>">
+// </a>
 var imgTmp = `
   <li>
-    <a href="<%= imgUrl %>">
-      <img src="<%= thumbnailUrl %>" alt="<%= alt %>">
-    </a>
+    <img onClick="showImage('<%= imgUrl %>')" src="<%= thumbnailUrl %>" alt="<%= alt %>">
   </li>`
   // <p><%= alt %>
 
