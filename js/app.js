@@ -152,13 +152,9 @@ var images = [
   },
 ]
 
-// <a href="<%= imgUrl %>">
-// </a>
 var imgTmp = `
   <li>
     <img onClick="showImage('<%= imgUrl %>')" src="<%= thumbnailUrl %>" alt="<%= alt %>">
   </li>`
-  // <p><%= alt %>
-
 
 document.onload = load()
