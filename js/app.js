@@ -62,6 +62,14 @@ var linksTmp = `
 
 var projects = [
     {
+      url: 'http://github.com/aneylon/backbone-blog',
+      name: 'Back Bone Blog',
+      thumbnailUrl: 'img/BackBoneBlog_thumb.jpg',
+      alt: 'Back Bone Blog',
+      description: 'Simple Full Stack blog with Backbone, Bootstrap, SQLite and Gulp tooling.',
+      gitUrl: 'http://github.com/aneylon/backbone-blog'
+    },
+    {
       url: 'http://things-near-me.herokuapp.com/',
       name: 'Things Near Me',
       thumbnailUrl: 'img/ThingsNearMe_thumb.jpg',
