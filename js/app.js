@@ -134,6 +134,11 @@ var projTmp = `
 
 var images = [
   {
+    imgUrl: 'img/RetroFutureFriday.jpg',
+    thumbnailUrl: 'img/RetroFutureFriday_thumb.jpg',
+    alt: 'Retro Future Friday'
+  },
+  {
     imgUrl: 'img/newYear2017.jpg',
     thumbnailUrl: 'img/newYear2017_thumb.jpg',
     alt: 'New Year 2017'
