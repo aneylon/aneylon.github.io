@@ -134,6 +134,11 @@ var projTmp = `
 
 var images = [
   {
+    imgUrl: 'img/AlienPlanet02.png',
+    thumbnailUrl: 'img/AlienPlanet02_thumb.png',
+    alt: 'Alien Planet Two'
+  },
+  {
     imgUrl: 'img/RetroFutureFriday.jpg',
     thumbnailUrl: 'img/RetroFutureFriday_thumb.jpg',
     alt: 'Retro Future Friday'
